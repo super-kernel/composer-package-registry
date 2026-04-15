@@ -1,0 +1,35 @@
+{
+	"name": "super-kernel/composer-package-registry",
+	"description": "Composer installed package registry parser with per-package cache support for SuperKernel.",
+	"type": "library",
+	"license": "MIT",
+	"keywords": [
+		"super-kernel",
+		"composer",
+		"package",
+		"package-registry",
+		"installed-packages",
+		"autoload",
+		"classmap"
+	],
+	"require": {
+		"php": "~8.4.0",
+		"super-kernel/runtime-context": "dev-main"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^11.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"SuperKernel\\ComposerPackageRegistry\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"SuperKernelTests\\ComposerPackageRegistry\\": "tests/"
+		}
+	},
+	"scripts": {
+		"phpunit": "@php phpunit --configuration=phpunit.xml.dist"
+	}
+}
